@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <title></title>
+    <head></head>
+    <body>
+        <style>
+            .body{
+                background-color: rgba(122, 161, 197, 0.981);
+            }
+            .main{
+                background-color: rgb(33, 31, 31);
+                border-radius: 30px;
+                width: 400px;
+                height: 500px;
+                position: relative;
+                top: 100px;
+                left: 550px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 10px;
+                padding: 10px;
+                box-shadow: 20px 20px 20px rgba(220, 109, 109, 0.696);
+            }
+            .child{
+                background-color:rgb(79, 75, 75);
+                text-align: center;
+                place-content: center;
+                border-radius: 15px;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                cursor: pointer;
+                box-shadow: 2px 2px 2px 2px rgba(219, 207, 207, 0.696);
+                font-size: 20px;
+            }
+            .child-1{
+                background-color: rgba(227, 31, 31, 0.115);
+                grid-column: span 4;
+                padding: 20px;
+                margin: 10px;
+                position: relatie;
+                top: 5px;
+                text-align:right;
+                overflow: hidden;
+                font-size: 24px;
+            }
+            .child-3{
+                background-color:red;
+            }
+            .child-4{
+                background-color: orange;
+            }
+            .child-5{
+                background-color: orange;
+            }
+            .child-6{
+                background-color: orange;
+            }
+            .child-7{
+                background-color: orange;
+            }
+            .child-19{
+                grid-column:span 2;
+            }
+        </style>
+        <div class="main">
+            <div class="child child-1" id ="header"></div>
+            <div class="child child-2" style="background-color: red;"><button onclick="handleclick()" style="background-color: red; color: white;border: none; font-family: Arial, Helvetica, sans-serif; width: 100%;height: 100%; border-radius: 15px;cursor: pointer; font-size: 20px;">AC</button></div>
+            <div class="child child-3"><button style="background-color: red; width: 100%; height: 100%;border: none; border-radius: 15px; color: white; font-size: 20px;">DEL</button></div>
+            <div class="child child-4">+</div>
+            <div class="child child-5">-</div>
+            <div class="child child-6">*</div>
+            <div class="child child-7">%</div>
+            <div class="child child-8" style="background-color: orange;">√</div>
+            <div class="child child-9" style="background-color: orange;">^2</div>
+            <div class="child child-10"><button onclick="nine(9)" style="background-color:rgb(79, 75, 75); border: none;color: white; width: 100%; height: 100%;border-radius: 15px;cursor: pointer; font-family: Arial, Helvetica, sans-serif;font-size: 20px;">9</button></div>
+            <div class="child child-11">8</div>
+            <div class="child child-12">7</div>
+            <div class="child child-13">6</div>
+            <div class="child child-14">5</div>
+            <div class="child child-15">4</div>
+            <div class="child child-16">3</div>
+            <div class="child child-17">2</div>
+            <div class="child child-18">1</div>
+            <div class="child child-19">0</div>
+            <div class="child child-20">=</div>
+        </div>
+    <script>
+            function op(){
+                alert("ac is clicked");
+                // alert is used to gets alerts from top
+            };
+            
+            function handleclick(){
+                const headertext = document.getElementById("header").innerText = "";
+                // headertext.textContent = "clear";
+                // this will change the AC to clear
+
+            };
+            function nine(num){
+                const headertext = document.getElementById("header");
+                headertext.textContent = "9";
+            }
+    </script>
+    </body>
+</html>

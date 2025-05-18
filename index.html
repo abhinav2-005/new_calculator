@@ -66,7 +66,7 @@
             .child-7{
                 background-color: orange;
             }
-            .child-19{
+            .child-20{
                 grid-column:span 2;
             }
         </style>
@@ -96,7 +96,7 @@
     <script>
             function add(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error") | headertext.value.includes("Result : ")){
                     headertext.value = "+";
                 }
                 else{
@@ -105,7 +105,7 @@
             };
             function subb(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "-";
                 }
                 else{
@@ -114,7 +114,7 @@
             };
             function mul(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "*";
                 }
                 else{
@@ -124,7 +124,7 @@
             };
             function divi(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "/";
                 }
                 else{
@@ -134,7 +134,7 @@
             };
             function sqrt(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "√";
                 }
                 else{
@@ -143,7 +143,7 @@
             };
             function pow(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "^2";
                 }
                 else{
@@ -152,7 +152,7 @@
             }
             function zero(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "0";
                 }
                 else{
@@ -162,7 +162,7 @@
             };
             function one(){
                 const headertext = document.getElementById("header");
-                if(headertext.value.includes("Syntax Error")){
+                if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "1";
                 }
                 else{
@@ -172,7 +172,7 @@
             };
             function two(){
                 const headertext = document.getElementById("header");
-                if(headertext.value.includes("Syntax Error")){
+                if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "2";
                 }
                 else{
@@ -182,7 +182,7 @@
             };
             function three(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "3";
                 }
                 else{
@@ -191,7 +191,7 @@
             };
             function four(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "4";
                 }
                 else{
@@ -201,7 +201,7 @@
             };
             function five(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "5";
                 }
                 else{
@@ -211,7 +211,7 @@
             };
             function six(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "6";
                 }
                 else{
@@ -221,7 +221,7 @@
             };
             function seven(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "7";
                 }
                 else{
@@ -231,7 +231,7 @@
             };
             function eight(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "8";
                 }
                 else{
@@ -241,7 +241,7 @@
             };
             function nine(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")){
+                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
                     headertext.value = "9";
                     // deleteing syntax error and printing 9
                 }
@@ -264,7 +264,7 @@
                         }
 
                         let result = eval(expr);
-                        headertext.value = result;
+                        headertext.value = "Result : "+result;
                     }
                     catch(ZerodivisionError){
                         headertext.value = "Syntax Error";

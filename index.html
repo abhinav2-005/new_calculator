@@ -96,8 +96,12 @@
     <script>
             function add(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error") | headertext.value.includes("Result : ")){
+                 if(headertext.value.includes("Syntax Error")){
                     headertext.value = "+";
+                }
+                else if(headertext.value.includes("Result : ")){
+                   let end_val = headertext.value.toString().length;
+                   headertext.value = headertext.value.slice(9,end_val)+"+";
                 }
                 else{
                 headertext.value += "+";
@@ -105,8 +109,12 @@
             };
             function subb(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
+                 if(headertext.value.includes("Syntax Error")){
                     headertext.value = "-";
+                }
+                else if(headertext.value.includes("Result : ")){
+                   let end_val = headertext.value.toString().length;
+                   headertext.value = headertext.value.slice(9,end_val)+"-";
                 }
                 else{
                 headertext.value += "-";
@@ -114,8 +122,12 @@
             };
             function mul(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
+                 if(headertext.value.includes("Syntax Error")){
                     headertext.value = "*";
+                }
+                else if(headertext.value.includes("Result : ")){
+                   let end_val = headertext.value.toString().length;
+                   headertext.value = headertext.value.slice(9,end_val)+"*";
                 }
                 else{
                 headertext.value += "*";
@@ -124,8 +136,12 @@
             };
             function divi(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
+                 if(headertext.value.includes("Syntax Error")){
                     headertext.value = "/";
+                }
+                else if(headertext.value.includes("Result : ")){
+                   let end_val = headertext.value.toString().length;
+                   headertext.value = headertext.value.slice(9,end_val)+"/";
                 }
                 else{
                 headertext.value += "/";
@@ -134,8 +150,12 @@
             };
             function sqrt(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
+                 if(headertext.value.includes("Syntax Error")){
                     headertext.value = "√";
+                }
+                else if(headertext.value.includes("Result : ")){
+                   let end_val = headertext.value.toString().length;
+                   headertext.value = headertext.value.slice(9,end_val)+"√";
                 }
                 else{
                 headertext.value += "√";
@@ -143,8 +163,12 @@
             };
             function pow(){
                 const headertext = document.getElementById("header");
-                 if(headertext.value.includes("Syntax Error")| headertext.value.includes("Result : ")){
+                 if(headertext.value.includes("Syntax Error")){
                     headertext.value = "^2";
+                }
+                else if(headertext.value.includes("Result : ")){
+                   let end_val = headertext.value.toString().length;
+                   headertext.value = headertext.value.slice(9,end_val)+"^2";
                 }
                 else{
                 headertext.value += "^2";

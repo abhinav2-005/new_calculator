@@ -155,7 +155,7 @@
                 }
                 else if(headertext.value.includes("Result : ")){
                    let end_val = headertext.value.toString().length;
-                   headertext.value = headertext.value.slice(9,end_val)+"√";
+                   headertext.value = "√"+headertext.value.slice(9,end_val);
                 }
                 else{
                 headertext.value += "√";

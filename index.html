@@ -45,6 +45,11 @@
                 text-align:right;
                 overflow: hidden;
                 font-size: 24px;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                border: none;
+                border-radius: 15px;
             }
             .child-3{
                 background-color:red;
@@ -66,43 +71,138 @@
             }
         </style>
         <div class="main">
-            <div class="child child-1" id ="header"></div>
-            <div class="child child-2" style="background-color: red;"><button onclick="handleclick()" style="background-color: red; color: white;border: none; font-family: Arial, Helvetica, sans-serif; width: 100%;height: 100%; border-radius: 15px;cursor: pointer; font-size: 20px;">AC</button></div>
-            <div class="child child-3"><button style="background-color: red; width: 100%; height: 100%;border: none; border-radius: 15px; color: white; font-size: 20px;">DEL</button></div>
-            <div class="child child-4">+</div>
-            <div class="child child-5">-</div>
-            <div class="child child-6">*</div>
-            <div class="child child-7">%</div>
-            <div class="child child-8" style="background-color: orange;">√</div>
-            <div class="child child-9" style="background-color: orange;">^2</div>
+            <input type="text" class="child-1" id="header" readonly>
+            <!-- <div class="child child-1" id ="header"></div> -->
+            <div class="child child-2" style="background-color: red;"><button onclick="allclear()" style="background-color: red; color: white;border: none; font-family: Arial, Helvetica, sans-serif; width: 100%;height: 100%; border-radius: 15px;cursor: pointer; font-size: 20px;">AC</button></div>
+            <div class="child child-3"><button onclick="del()" style="background-color: red; width: 100%; height: 100%;border: none; border-radius: 15px; color: white;font-size: 20px;font-family: Arial, Helvetica, sans-serif;cursor: pointer;">DEL</button></div>
+            <div class="child child-4"><button onclick = "add()"style="cursor :pointer;background-color: orange ;width: 100%; height: 100%;border: none;border-radius: 15px;color: white;font-family: Arial, Helvetica, sans-serif;font-size: 20px;">+</button></div>
+            <div class="child child-5"><button onclick="subb()"style="cursor: pointer;background-color:orange;color:white;width:100%;height100%;border:none;border-radius:15px;font-family:Arial, Helvetica, sans-serif;font-size:20px">-</button></div>
+            <div class="child child-6"><button onclick="mul()" style="background-color: orange;color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">*</button></div>
+            <div class="child child-7"><button onclick="divi()" style="background-color: orange;color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">/</button></div>
+            <div class="child child-8" style="background-color: orange;"><button onclick="sqrt()" style="background-color: orange;color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">√</button></div>
+            <div class="child child-9" style="background-color: orange;"><button onclick="pow()" style="background-color: orange;color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">^2</button></div>
             <div class="child child-10"><button onclick="nine(9)" style="background-color:rgb(79, 75, 75); border: none;color: white; width: 100%; height: 100%;border-radius: 15px;cursor: pointer; font-family: Arial, Helvetica, sans-serif;font-size: 20px;">9</button></div>
-            <div class="child child-11">8</div>
-            <div class="child child-12">7</div>
-            <div class="child child-13">6</div>
-            <div class="child child-14">5</div>
-            <div class="child child-15">4</div>
-            <div class="child child-16">3</div>
-            <div class="child child-17">2</div>
-            <div class="child child-18">1</div>
-            <div class="child child-19">0</div>
-            <div class="child child-20">=</div>
+            <div class="child child-11"><button onclick="eight()" style="background-color: rgb(79, 75, 75);color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">8</button></div>
+            <div class="child child-12"><button onclick="seven()" style="background-color: rgb(79, 75, 75);color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">7</button></div>
+            <div class="child child-13"><button onclick="six()" style="background-color: rgb(79, 75, 75);color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">6</button></div>
+            <div class="child child-14"><button onclick="five()" style="background-color: rgb(79, 75, 75);color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">5</button></div>
+            <div class="child child-15"><button onclick="four()" style="background-color: rgb(79, 75, 75);color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">4</button></div>
+            <div class="child child-16"><button onclick="three()" style="background-color: rgb(79, 75, 75);color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">3</button></div>
+            <div class="child child-17"><button onclick="two()" style="background-color: rgb(79, 75, 75);color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">2</button></div>
+            <div class="child child-18"><button onclick="one()" style="background-color:rgb(79, 75, 75);color: white;font-family: Arial, Helvetica, sans-serif;font-size: 20px;width: 100%;height: 100%;cursor: pointer;border: none;border-radius: 15px;">1</button></div>
+            <div class="child child-19"><button onclick="zero()" style="background-color: rgb(79, 75, 75);color: white;border: none;border-radius: 15px;width: 100%;height: 100%;font-family: Arial, Helvetica, sans-serif;font-size: 20px;cursor: pointer;">0</button></div>
+            <div class="child child-20"><button onclick="res()" style="background-color: rgb(79, 75, 75);color: white;border: none;border-radius: 15px;font-family: Arial, Helvetica, sans-serif;font-size: 20px;width: 100%;height: 100%; cursor:pointer">=</button></div>
         </div>
     <script>
-            function op(){
-                alert("ac is clicked");
-                // alert is used to gets alerts from top
+            function add(){
+                const headertext = document.getElementById("header");
+                headertext.value += "+";
             };
-            
-            function handleclick(){
-                const headertext = document.getElementById("header").innerText = "";
-                // headertext.textContent = "clear";
-                // this will change the AC to clear
+            function subb(){
+                const headertext = document.getElementById("header");
+                headertext.value += "-";
+            };
+            function mul(){
+                const headertext = document.getElementById("header");
+                headertext.value += "*";
 
             };
-            function nine(num){
+            function divi(){
                 const headertext = document.getElementById("header");
-                headertext.textContent = "9";
+                headertext.value += "/";
+
+            };
+            function sqrt(){
+                const headertext = document.getElementById("header");
+                headertext.value += "√";
+            };
+            function pow(){
+                const headertext = document.getElementById("header");
+                headertext.value += "^2";
             }
+            function zero(){
+                const headertext = document.getElementById("header");
+                headertext.value += "0";
+
+            };
+            function one(){
+                const headertext = document.getElementById("header");
+                headertext.value += "1";
+
+            };
+            function two(){
+                const headertext = document.getElementById("header");
+                headertext.value += "2";
+
+            };
+            function three(){
+                const headertext = document.getElementById("header");
+                headertext.value += "3";
+
+            };
+            function four(){
+                const headertext = document.getElementById("header");
+                headertext.value += "4";
+
+            };
+            function five(){
+                const headertext = document.getElementById("header");
+                headertext.value += "5";
+
+            };
+            function six(){
+                const headertext = document.getElementById("header");
+                headertext.value += "6";
+
+            };
+            function seven(){
+                const headertext = document.getElementById("header");
+                headertext.value += "7";
+
+            };
+            function eight(){
+                const headertext = document.getElementById("header");
+                headertext.value += "8";
+
+            };
+            function nine(){
+                const headertext = document.getElementById("header");
+                headertext.value += "9";
+            };
+            function res() {
+                    let headertext = document.getElementById("header");
+                    let expr = headertext.value;
+                    try{
+                        if (expr.includes("√")) {
+                            expr = expr.replace(/√(\d+(\.\d+)?)/g, "Math.sqrt($1)");
+                            // replacing the √ with math.sqrt(value after it)
+                        }
+
+                        if (expr.includes("^2")) {
+                            expr = expr.replace(/(\d+(\.\d+)?)\^2/g, "Math.pow($1, 2)");
+                            // replacing the ^2 with math.pow(value after it,2)
+                        }
+
+                        let result = eval(expr);
+                        headertext.value = result;
+                    }
+                    catch(ZerodivisionError){
+                        headertext.value = "Syntax Error";
+                    }
+
+            };
+            function del(){
+                const headertext = document.getElementById("header");
+                if (headertext.value == "^2"){
+                    headertext.value = headertext.value.slice(0,-2);
+                }
+                headertext.value = headertext.value.slice(0,-1);
+            };
+            function allclear(){
+                const headertext = document.getElementById("header");
+                headertext.value = ""
+            };
+
     </script>
     </body>
 </html>
